@@ -57,7 +57,9 @@ Copy application-example.properties to application.properties and fill in your c
 ```
 Open http://localhost:8080
 
-📝 Usage
+---
+
+## 📝 Usage
 
     Go to Home page → choose Login or Sign Up.
 
@@ -68,9 +70,9 @@ Open http://localhost:8080
     Access /hello page (secured for authenticated users only).
 
     Logout using the Sign Out button.
+---
 
-
-📌 Learning Goals
+## 📌 Learning Goals
 
     Understand Spring Security login/signup flow
 
@@ -79,4 +81,4 @@ Open http://localhost:8080
     Use Thymeleaf templates for forms and pages
 
     Learn how to secure web pages using roles and authentication
-
+---
