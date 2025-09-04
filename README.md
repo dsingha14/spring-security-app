@@ -39,23 +39,23 @@ src
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 cd YOUR_REPO
+```
+### 2. Configure PostgreSQL
 
-2. Configure PostgreSQL
-
+```bash
 CREATE DATABASE mydb;
 CREATE USER myuser WITH PASSWORD 'mypassword';
 GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
+```
+Copy application-example.properties to application.properties and fill in your credentials.
 
-    Copy application-example.properties to application.properties and fill in your credentials.
+### 3. Build and run the project
 
-3. Build and run the project
-
+```bash
 ./mvnw clean install
 ./mvnw spring-boot:run
-
-    Open http://localhost:8080
-
-    in your browser.
+```
+Open http://localhost:8080
 
 📝 Usage
 
