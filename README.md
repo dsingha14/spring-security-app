@@ -32,22 +32,24 @@ src
 
 ```
 ---
-
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the project
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 cd YOUR_REPO
-```
+````
+
 ### 2. Configure PostgreSQL
 
-```bash
+```sql
 CREATE DATABASE mydb;
 CREATE USER myuser WITH PASSWORD 'mypassword';
 GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
 ```
-Copy application-example.properties to application.properties and fill in your credentials.
+
+* Copy `application-example.properties` to `application.properties` and fill in your credentials.
+
 
 ### 3. Build and run the project
 
@@ -55,30 +57,35 @@ Copy application-example.properties to application.properties and fill in your c
 ./mvnw clean install
 ./mvnw spring-boot:run
 ```
-Open http://localhost:8080
 
+* Open [http://localhost:8080](http://localhost:8080) in your browser.
 ---
 
 ## 📝 Usage
 
-    Go to Home page → choose Login or Sign Up.
+1. Go to **Home page** → choose **Login** or **Sign Up**.
+2. Register a new user via signup.
+3. Login with registered credentials.
+4. Access `/hello` page (secured for authenticated users only).
+5. Logout using the **Sign Out** button.
 
-    Register a new user via signup.
-
-    Login with registered credentials.
-
-    Access /hello page (secured for authenticated users only).
-
-    Logout using the Sign Out button.
 ---
 
 ## 📌 Learning Goals
 
-    Understand Spring Security login/signup flow
+* Understand Spring Security login/signup flow
+* Work with PostgreSQL and Spring Data JPA
+* Use Thymeleaf templates for forms and pages
+* Learn how to secure web pages using roles and authentication
+---
 
-    Work with PostgreSQL and Spring Data JPA
+## 🔑 Features
 
-    Use Thymeleaf templates for forms and pages
+- User signup and login
+- Secured pages using Spring Security
+- Password encryption with **BCrypt**
+- Integration with PostgreSQL using Spring Data JPA
+- Simple Thymeleaf templates for UI
+- MVC architecture: `controller`, `service`, `repository`, `model`
 
-    Learn how to secure web pages using roles and authentication
 ---
